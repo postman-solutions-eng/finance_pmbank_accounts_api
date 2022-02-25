@@ -1,0 +1,442 @@
+{
+    "info": {
+        "_postman_id": "e9a1bfc0-f373-42dd-9e9c-f83930f5a0ea",
+        "name": "Accounts Integration Test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "accounts",
+            "item": [
+                {
+                    "name": "{account Number}",
+                    "item": [
+                        {
+                            "name": "statement",
+                            "item": [
+                                {
+                                    "name": "Date",
+                                    "id": "398284da-39e7-4677-8bc0-a22c0594dc41",
+                                    "request": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/form-urlencoded"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"from\": \"{{$randomDatePast}}\",\n    \"to\": \"{{$randomDateRecent}}\"\n}"
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "accounts",
+                                                ":accountNumber",
+                                                "statement",
+                                                "date"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "id": "b34e71e6-7d56-46be-8028-00e171cbb0c7",
+                                                    "key": "accountNumber",
+                                                    "value": "velit aliquip dolore",
+                                                    "description": "(Required) "
+                                                }
+                                            ]
+                                        },
+                                        "description": "Date"
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "39c18965-35cb-4424-8def-62be3331e1dd",
+                                            "name": "200 OK",
+                                            "originalRequest": {
+                                                "method": "GET",
+                                                "header": [],
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\n    \"from\": \"{{$randomDatePast}}\",\n    \"to\": \"{{$randomDateRecent}}\"\n}"
+                                                },
+                                                "url": {
+                                                    "raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "path": [
+                                                        "accounts",
+                                                        ":accountNumber",
+                                                        "statement",
+                                                        "date"
+                                                    ],
+                                                    "variable": [
+                                                        {
+                                                            "key": "accountNumber"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "_postman_previewlanguage": "text",
+                                            "header": [
+                                                {
+                                                    "disabled": false,
+                                                    "key": "Access-Control-Allow-Origin",
+                                                    "value": "*",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "Connection",
+                                                    "value": "close",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "Content-Encoding",
+                                                    "value": "gzip",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "Date",
+                                                    "value": "Mon, 14 Jun 2021 14:30:25 GMT",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "ETag",
+                                                    "value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\"",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "Server",
+                                                    "value": "nginx",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "Transfer-Encoding",
+                                                    "value": "chunked",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "Vary",
+                                                    "value": "Accept-Encoding",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "X-RateLimit-Limit",
+                                                    "value": "120",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "X-RateLimit-Remaining",
+                                                    "value": "119",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "X-RateLimit-Reset",
+                                                    "value": "1623681083",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "x-srv-span",
+                                                    "value": "v=1;s=210e5b055e5bd71e",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "key": "x-srv-trace",
+                                                    "value": "v=1;t=d33d68b932344fce",
+                                                    "description": ""
+                                                },
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "text/plain"
+                                                }
+                                            ],
+                                            "cookie": [],
+                                            "responseTime": null,
+                                            "body": "{\n    \"period\": {\n        \"from\": \"{{$randomDatePast}}\",\n        \"to\": \"{{$randomDateRecent}}\"\n    },\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Latest",
+                                    "id": "1cf59fa2-f8b4-462a-ad5b-72fb14ba2391",
+                                    "request": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "accounts",
+                                                ":accountNumber",
+                                                "statement",
+                                                "latest"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "id": "41148e8e-d023-4f4b-834b-a1ab9ed835d8",
+                                                    "key": "accountNumber",
+                                                    "value": "velit aliquip dolore",
+                                                    "description": "(Required) "
+                                                }
+                                            ]
+                                        },
+                                        "description": "Latest"
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "a13d5adf-9e86-45f8-a4d9-aa5189b8405b",
+                                            "name": "response",
+                                            "originalRequest": {
+                                                "method": "GET",
+                                                "header": [],
+                                                "url": {
+                                                    "raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "path": [
+                                                        "accounts",
+                                                        ":accountNumber",
+                                                        "statement",
+                                                        "latest"
+                                                    ],
+                                                    "variable": [
+                                                        {
+                                                            "key": "accountNumber"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "_postman_previewlanguage": "text",
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "text/plain"
+                                                }
+                                            ],
+                                            "cookie": [],
+                                            "responseTime": null,
+                                            "body": ""
+                                        }
+                                    ]
+                                }
+                            ],
+                            "id": "24c0220a-d3c1-44fd-a77e-a91f36c17e03"
+                        },
+                        {
+                            "name": "Overview",
+                            "event": [
+                                {
+                                    "listen": "test",
+                                    "script": {
+                                        "id": "a75938c7-9fba-431c-89be-9752a5c83038",
+                                        "exec": [
+                                            "pm.test(\"Status code is 200\", function () {\r",
+                                            "    pm.response.to.have.status(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Status code is 200\", function () {\r",
+                                            "    pm.response.to.have.status(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Status code is 200\", function () {\r",
+                                            "    pm.response.to.have.status(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Status code is 200\", function () {\r",
+                                            "    pm.response.to.have.status(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Status code is 200\", function () {\r",
+                                            "    pm.response.to.have.status(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Response time is less than 200ms\", function () {\r",
+                                            "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Response time is less than 200ms\", function () {\r",
+                                            "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Response time is less than 200ms\", function () {\r",
+                                            "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Response time is less than 200ms\", function () {\r",
+                                            "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Response time is less than 200ms\", function () {\r",
+                                            "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Response time is less than 200ms\", function () {\r",
+                                            "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                                            "});\r",
+                                            "pm.test(\"Response time is less than 200ms\", function () {\r",
+                                            "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                                            "});"
+                                        ],
+                                        "type": "text/javascript"
+                                    }
+                                }
+                            ],
+                            "id": "581ac3fd-e0df-4fbe-9a14-04cdea3b559a",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "accounts",
+                                        ":accountNumber",
+                                        "overview"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "1a917144-fa35-43aa-868a-44d739cb07df",
+                                            "key": "accountNumber",
+                                            "value": "velit aliquip dolore",
+                                            "description": "(Required) "
+                                        }
+                                    ]
+                                },
+                                "description": "Overview"
+                            },
+                            "response": [
+                                {
+                                    "id": "7813cc3c-163d-4395-8845-47ec1cc4eb8e",
+                                    "name": "response",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "accounts",
+                                                ":accountNumber",
+                                                "overview"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "accountNumber"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/plain"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "6aadc4a1-805d-48b1-9bd6-f0f752f6979b"
+                },
+                {
+                    "name": "Create",
+                    "id": "ca4f5622-a05e-4556-8fa7-dbea80c8f7e4",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"holder\": \"{{customerId}}\",\n    \"type\": \"{{$randomBankAccountName}}\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/accounts/create",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "accounts",
+                                "create"
+                            ]
+                        },
+                        "description": "Create"
+                    },
+                    "response": [
+                        {
+                            "id": "dde7e53e-e2d1-400c-aba2-656bb99d0620",
+                            "name": "response",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"holder\": \"{{customerId}}\",\n    \"type\": \"{{$randomBankAccountName}}\"\n}"
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/accounts/create",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "accounts",
+                                        "create"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "text/plain"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "id": "4e864925-6459-48bf-9215-f0612237bad6"
+        }
+    ],
+    "variable": [
+        {
+            "id": "e424af91-74ec-488d-a594-3efa86fcf9da",
+            "key": "baseUrl",
+            "value": "{{url}}",
+            "type": "string"
+        }
+    ]
+}
