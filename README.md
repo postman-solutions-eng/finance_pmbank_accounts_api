@@ -1,3 +1,3 @@
 # finance_pmbank_accounts_api
 
-[![postman-solutions-eng](https://circleci.com/gh/postman-solutions-eng/finance_pmbank_accounts_api.svg?style=shield)](<https://app.circleci.com/pipelines/github/postman-solutions-eng/finance_pmbank_accounts_api?filter=all)
+[![CircleCI](https://circleci.com/gh/postman-solutions-eng/finance_pmbank_accounts_api/tree/main.svg?style=shield)](https://circleci.com/gh/postman-solutions-eng/finance_pmbank_accounts_api/tree/main)
