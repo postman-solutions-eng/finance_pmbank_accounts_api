@@ -18,6 +18,9 @@
 								{
 									"name": "Date",
 									"id": "7a5d843e-2f9f-4df6-96fc-e2b6abc0e7e2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
 									"request": {
 										"method": "GET",
 										"header": [
@@ -75,7 +78,6 @@
 											"status": "OK",
 											"code": 200,
 											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
 											"header": [
 												{
 													"disabled": false,
@@ -161,7 +163,6 @@
 												}
 											],
 											"cookie": [],
-											"responseTime": null,
 											"body": "{\n    \"period\": {\n        \"from\": \"{{$randomDatePast}}\",\n        \"to\": \"{{$randomDateRecent}}\"\n    },\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 										}
 									]
@@ -169,6 +170,9 @@
 								{
 									"name": "Latest",
 									"id": "f4352caf-4dde-4fda-a63a-5030a3138891",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -221,7 +225,6 @@
 											"status": "OK",
 											"code": 200,
 											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
@@ -229,7 +232,6 @@
 												}
 											],
 											"cookie": [],
-											"responseTime": null,
 											"body": ""
 										}
 									]
@@ -340,7 +342,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -348,7 +349,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": null,
 									"body": ""
 								}
 							]
@@ -359,6 +359,9 @@
 				{
 					"name": "Create",
 					"id": "e7b3f09c-d2b8-48f9-ab60-b4fa819007d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "POST",
 						"header": [
@@ -372,13 +375,19 @@
 							"raw": "{\n    \"holder\": \"{{customerId}}\",\n    \"type\": \"{{$randomBankAccountName}}\"\n}"
 						},
 						"url": {
-							"raw": "{{baseUrl}}/accounts/create",
+							"raw": "{{baseUrl}}/accounts/create?abc-1234",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"accounts",
 								"create"
+							],
+							"query": [
+								{
+									"key": "abc-1234",
+									"value": null
+								}
 							]
 						},
 						"description": "Create"
@@ -408,7 +417,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -416,7 +424,6 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": ""
 						}
 					]
