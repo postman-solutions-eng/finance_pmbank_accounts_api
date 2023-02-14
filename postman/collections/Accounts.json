@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "29338000-2909-4c4e-92be-2ec6019313e1",
+		"_postman_id": "2266e22b-a16e-4e68-9feb-2f3e4d3dd276",
 		"name": "Accounts",
 		"description": "Endpoints for frontend implementations when it comes to the account space.\n\nResponses can be visualized to give a clearer picture on what responses provide.\n\nMake sure to select the respective Environment file when making calls for the Collection \n![Imgur](https://i.imgur.com/ymcwlzB.gif)\n\nReference image example here:\n![Imgur](https://i.imgur.com/WbEHxDz.jpg)\nand example of Date\n![Imgur](https://i.imgur.com/zQq3VNF.jpg)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "24464586-29338000-2909-4c4e-92be-2ec6019313e1"
+		"_uid": "16727226-2266e22b-a16e-4e68-9feb-2f3e4d3dd276"
 	},
 	"item": [
 		{
@@ -16,82 +16,79 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ff57579a-a13c-415e-8d4b-886fa4ee1a09",
+								"id": "4b5faec3-070f-48f6-8916-e21a6c2fe695",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"const res = pm.response.json();",
+									"// const template = `",
+									"//     <style>",
+									"//         .summary ul {",
+									"//             list-style-type: none;",
+									"//         }",
+									"//         .summary div {",
+									"//             display: inline-block;",
+									"//             width: 33%;",
+									"//         }",
+									"//     </style>",
+									"//     <link rel=\"stylesheet\" href=\"https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css\">",
+									"//     <script src=\"https://code.jquery.com/jquery-3.5.1.min.js\"></script>",
+									"//     <script src=\"https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js\"></script>",
+									"//     <h1>PM Bank</h1>",
+									"//     <div class=\"summary\">",
+									"//         <div>",
+									"//             <ul>",
+									"//                 <li><strong>Statement: </strong> {{res.period}}</li>",
+									"//                 <li><strong>Opening balance: </strong> \\${{res.balance.opening}}</li>",
+									"//                 <li><strong>Closing balance: </strong> \\${{res.balance.closing}}</li>",
+									"//             </ul>",
+									"//         </div>",
+									"//         <div>",
+									"//             <ul>",
+									"//                 <li><strong>Account: </strong> {{accountNumber}}</li>",
+									"//                 <li><strong>Money in: </strong> \\${{res.money.in}}</li>",
+									"//                 <li><strong>Money out: </strong> \\${{res.money.out}}</li>",
+									"//             </ul>",
+									"//         </div>",
+									"//     </div>",
+									"//     <div class=\"table\">",
+									"//         <table>",
+									"//             <thead>",
+									"//                 <tr>",
+									"//                     <th>Date</th>",
+									"//                     <th>Type</th>",
+									"//                     <th>Description</th>",
+									"//                     <th>Amount</th>",
+									"//                     <th>Balance</th>",
+									"//                 </tr>",
+									"//             </thead>",
+									"//             <tbody>",
+									"//             {{#each res.transactions}}",
+									"//                 <tr>",
+									"//                     <td>{{date}}</td>",
+									"//                     <td>{{type}}</td>",
+									"//                     <td>{{description}}</td>",
+									"//                     <td>{{amount}}</td>",
+									"//                     <td>{{balance}}</td>",
+									"//                 </tr>",
+									"//             {{/each}}",
+									"//             </tbody>",
+									"//         </table>",
+									"//     </div>",
 									"",
-									"",
-									"const template = `",
-									"    <style>",
-									"        .summary ul {",
-									"            list-style-type: none;",
-									"        }",
-									"        .summary div {",
-									"            display: inline-block;",
-									"            width: 33%;",
-									"        }",
-									"    </style>",
-									"    <link rel=\"stylesheet\" href=\"https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css\">",
-									"    <script src=\"https://code.jquery.com/jquery-3.5.1.min.js\"></script>",
-									"    <script src=\"https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js\"></script>",
-									"    <h1>PM Bank</h1>",
-									"    <div class=\"summary\">",
-									"        <div>",
-									"            <ul>",
-									"                <li><strong>Statement: </strong> {{res.period}}</li>",
-									"                <li><strong>Opening balance: </strong> \\${{res.balance.opening}}</li>",
-									"                <li><strong>Closing balance: </strong> \\${{res.balance.closing}}</li>",
-									"            </ul>",
-									"        </div>",
-									"        <div>",
-									"            <ul>",
-									"                <li><strong>Account: </strong> {{accountNumber}}</li>",
-									"                <li><strong>Money in: </strong> \\${{res.money.in}}</li>",
-									"                <li><strong>Money out: </strong> \\${{res.money.out}}</li>",
-									"            </ul>",
-									"        </div>",
-									"    </div>",
-									"    <div class=\"table\">",
-									"        <table>",
-									"            <thead>",
-									"                <tr>",
-									"                    <th>Date</th>",
-									"                    <th>Type</th>",
-									"                    <th>Description</th>",
-									"                    <th>Amount</th>",
-									"                    <th>Balance</th>",
-									"                </tr>",
-									"            </thead>",
-									"            <tbody>",
-									"            {{#each res.transactions}}",
-									"                <tr>",
-									"                    <td>{{date}}</td>",
-									"                    <td>{{type}}</td>",
-									"                    <td>{{description}}</td>",
-									"                    <td>{{amount}}</td>",
-									"                    <td>{{balance}}</td>",
-									"                </tr>",
-									"            {{/each}}",
-									"            </tbody>",
-									"        </table>",
-									"    </div>",
-									"",
-									"    <script>",
-									"        $('table').DataTable()",
-									"    </script>",
-									"`",
-									"const accountNumber = pm.globals.get('accountNumber');",
-									"pm.visualizer.set(template, { res, accountNumber });"
+									"//     <script>",
+									"//         $('table').DataTable()",
+									"//     </script>",
+									"// `",
+									"// const accountNumber = pm.globals.get('accountNumber');",
+									"// pm.visualizer.set(template, { res, accountNumber });"
 								],
 								"type": "text/javascript"
 							}
 						}
 					],
-					"id": "53ef8310-b87c-445d-8ec8-af14a2999c0f",
+					"id": "ba580b6a-c040-44a7-8b85-b7e5d696a2ca",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -108,13 +105,20 @@
 								"{{accountNumber}}",
 								"statement",
 								"latest"
+							],
+							"variable": [
+								{
+									"key": "accountNumber",
+									"value": "nostrud",
+									"description": "(Required) "
+								}
 							]
 						},
 						"description": "Use the Statement/Latest to see the account and balance of your user."
 					},
 					"response": [
 						{
-							"id": "b50c4b09-26bf-493d-9195-618628cda6b9",
+							"id": "d2c580c7-313e-477c-b539-7776840651dd",
 							"name": "200 OK",
 							"originalRequest": {
 								"method": "GET",
@@ -129,11 +133,18 @@
 										"{{accountNumber}}",
 										"statement",
 										"latest"
+									],
+									"variable": [
+										{
+											"key": "accountNumber",
+											"value": "nostrud",
+											"description": "(Required) "
+										}
 									]
-								}
+								},
+								"description": "Use the Statement/Latest to see the account and balance of your user."
 							},
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -143,11 +154,10 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"period\": \"latest\",\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 						},
 						{
-							"id": "87db37d9-4665-4021-add2-e2ef8c9eda57",
+							"id": "846516ca-bf7b-489d-b34f-aead01d5d31d",
 							"name": "Latest",
 							"originalRequest": {
 								"method": "GET",
@@ -162,13 +172,20 @@
 										"{{accountNumber}}",
 										"statement",
 										"latest"
+									],
+									"variable": [
+										{
+											"key": "accountNumber",
+											"value": "nostrud",
+											"description": "(Required) "
+										}
 									]
-								}
+								},
+								"description": "Use the Statement/Latest to see the account and balance of your user."
 							},
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -228,7 +245,6 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"period\": \"latest\",\n    \"balance\": {\n        \"opening\": 870.27,\n        \"closing\": 54.64\n    },\n    \"money\": {\n        \"in\": 464.03,\n        \"out\": 974.2\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Fri Jun 25 2021 21:58:26 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Kunde LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 225.99,\n            \"balance\": 878.82\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 17:19:48 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Hermann - Rice\",\n            \"type\": \"payment\",\n            \"amount\": 994.54,\n            \"balance\": 340.84\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 15:04:34 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Crona, Robel and Brakus\",\n            \"type\": \"deposit\",\n            \"amount\": 793.19,\n            \"balance\": 85.51\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 01:40:29 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Gutkowski - Hilpert\",\n            \"type\": \"deposit\",\n            \"amount\": 470.73,\n            \"balance\": 723.76\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 00:50:31 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Ortiz, Steuber and Conn\",\n            \"type\": \"deposit\",\n            \"amount\": 697.93,\n            \"balance\": 189.47\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 16:59:17 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Kunze, Will and Hermann\",\n            \"type\": \"withdrawal\",\n            \"amount\": 813.08,\n            \"balance\": 80.59\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 20:26:01 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Grant, Swaniawski and Cremin\",\n            \"type\": \"deposit\",\n            \"amount\": 236.16,\n            \"balance\": 365.98\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 07:26:30 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Kuhn - Monahan\",\n            \"type\": \"invoice\",\n            \"amount\": 621.22,\n            \"balance\": 600.04\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 17:26:45 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Bernhard Inc\",\n            \"type\": \"withdrawal\",\n            \"amount\": 718.87,\n            \"balance\": 381.78\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 10:26:39 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Berge - Weimann\",\n            \"type\": \"payment\",\n            \"amount\": 256.74,\n            \"balance\": 731.77\n        }\n    ]\n}"
 						}
 					]
@@ -239,21 +255,9 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8cc0b9aa-b0dd-475f-89c6-83357a35151f",
+								"id": "9310934b-dc76-44a1-8cab-0d2ab7983fdf",
 								"exec": [
 									"const res = pm.response.json();",
-									"",
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"",
-									"",
-									"",
-									"",
-									"",
-									"",
-									"",
 									"",
 									"",
 									"const template = `",
@@ -322,7 +326,7 @@
 							}
 						}
 					],
-					"id": "399faa6e-228f-4920-9ff6-38d2a7d2b016",
+					"id": "de2c4eed-7d1c-41e5-86b4-d25f0c3acdd8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -360,7 +364,7 @@
 					},
 					"response": [
 						{
-							"id": "fae127da-a74f-4559-987c-7a13ec96e99c",
+							"id": "38c1ca80-5f06-4243-ad57-93bbef1bfa86",
 							"name": "200 OK",
 							"originalRequest": {
 								"method": "GET",
@@ -391,12 +395,12 @@
 										"statement",
 										"date"
 									]
-								}
+								},
+								"description": "Use the statement/date endpoint to retrieve the dates of the transactions"
 							},
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -456,11 +460,10 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"period\": {\n        \"from\": \"{{$randomDatePast}}\",\n        \"to\": \"{{$randomDateRecent}}\"\n    },\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 						},
 						{
-							"id": "5da06536-0b08-4645-affe-370d2cc7675e",
+							"id": "fadde9e3-4a04-4a75-bcab-65778c2dd7d5",
 							"name": "Date",
 							"originalRequest": {
 								"method": "GET",
@@ -491,12 +494,12 @@
 										"statement",
 										"date"
 									]
-								}
+								},
+								"description": "Use the statement/date endpoint to retrieve the dates of the transactions"
 							},
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -556,13 +559,12 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"period\": {\n        \"from\": \"Wed Mar 17 2021 16:04:09 GMT+0000 (Coordinated Universal Time)\",\n        \"to\": \"Fri Jun 25 2021 10:12:14 GMT+0000 (Coordinated Universal Time)\"\n    },\n    \"balance\": {\n        \"opening\": 682.09,\n        \"closing\": 481.85\n    },\n    \"money\": {\n        \"in\": 694.86,\n        \"out\": 541.04\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Fri Jun 25 2021 19:03:47 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Schinner - Schowalter\",\n            \"type\": \"payment\",\n            \"amount\": 9.24,\n            \"balance\": 957.17\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 14:22:51 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"McLaughlin - Steuber\",\n            \"type\": \"deposit\",\n            \"amount\": 664.71,\n            \"balance\": 645.25\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 12:55:27 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Dicki Group\",\n            \"type\": \"deposit\",\n            \"amount\": 907.42,\n            \"balance\": 795.62\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 02:45:45 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Osinski Inc\",\n            \"type\": \"invoice\",\n            \"amount\": 240.24,\n            \"balance\": 93.44\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 21:36:47 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Homenick, Hoppe and Grimes\",\n            \"type\": \"payment\",\n            \"amount\": 879.51,\n            \"balance\": 885.84\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 18:55:21 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Sauer - Turcotte\",\n            \"type\": \"invoice\",\n            \"amount\": 436.22,\n            \"balance\": 450.93\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 17:53:44 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Oberbrunner Group\",\n            \"type\": \"invoice\",\n            \"amount\": 995.82,\n            \"balance\": 354.77\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 10:41:51 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Dooley LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 886.28,\n            \"balance\": 906.21\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 18:44:34 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Haley - Buckridge\",\n            \"type\": \"payment\",\n            \"amount\": 42.23,\n            \"balance\": 701.92\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 04:02:49 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Breitenberg and Sons\",\n            \"type\": \"deposit\",\n            \"amount\": 570.68,\n            \"balance\": 524.37\n        }\n    ]\n}"
 						}
 					]
 				}
 			],
-			"id": "b7474ca9-1dc0-43ce-87a8-d216e01b6657"
+			"id": "6dbfdea0-6fd6-4f15-855f-80b82a948805"
 		},
 		{
 			"name": "Create",
@@ -570,17 +572,21 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d75a525c-e5ff-4b20-8d04-7082e58cd2b9",
+						"id": "5fde5b3b-0d64-4728-a042-6972c2714a21",
 						"exec": [
 							"const res = pm.response.json();",
 							"",
-							"pm.globals.set(\"accountNumber\", res.details.domestic.account);"
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
-			"id": "1f998e1b-20a8-4237-9b6a-1f48da575b49",
+			"id": "ec41da50-5dfd-4645-a7fd-7b78ba7f61f5",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -605,25 +611,19 @@
 						"accounts",
 						"create"
 					]
-				}
+				},
+				"description": "Hi everyone."
 			},
 			"response": [
 				{
-					"id": "2a9815f5-a97b-4889-a80c-2858184f2bc7",
+					"id": "75b09493-8398-42f6-a3f7-13d8e542f76d",
 					"name": "200 OK",
 					"originalRequest": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"type\": \"{{$randomBankAccountName}}\",\n    \"holder\": {\n        \"name\": {\n            \"first\": \"{{$randomFirstName}}\",\n            \"middle\": \"{{$randomFirstName}}\",\n            \"last\": \"{{$randomLastName}}\"\n        },\n        \"dob\": \"{{$randomDatePast}}\",\n        \"address\": {\n            \"street\": \"{{$randomStreetAddress}}\",\n            \"city\": \"{{$randomCity}}\",\n            \"country\": \"{{$randomCountry}}\"\n        }\n    }\n}",
+							"raw": "{\n    \"type\": \"{{$randomBankAccountName}}\",\n    \"holder\": \"{{customerId}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -639,10 +639,10 @@
 								"accounts",
 								"create"
 							]
-						}
+						},
+						"description": "Hi everyone."
 					},
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -652,11 +652,10 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n    \"type\": \"{{$randomBankAccountName}}\",\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"{{$randomBankAccount}}\",\n            \"routing\": \"{{$randomBankAccount}}\"\n        },\n        \"international\": {\n            \"bic\": \"{{$randomBankAccountBic}}\",\n            \"iban\": \"{{$randomBankAccountIban}}\"\n        }\n    }\n}"
 				},
 				{
-					"id": "3f51961b-00db-4391-8007-2f3bfb304cce",
+					"id": "226ed0da-1fe3-4483-8c13-2f4130966990",
 					"name": "Create",
 					"originalRequest": {
 						"method": "POST",
@@ -679,12 +678,12 @@
 								"accounts",
 								"create"
 							]
-						}
+						},
+						"description": "Hi everyone."
 					},
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Date",
@@ -744,7 +743,6 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n    \"type\": \"Home Loan Account\",\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"18924483\",\n            \"routing\": \"21804671\"\n        },\n        \"international\": {\n            \"bic\": \"UYUEPTC1\",\n            \"iban\": \"EE400911030046200371\"\n        }\n    }\n}"
 				}
 			]
@@ -755,16 +753,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4f8df908-62eb-426c-a9be-22c74cee8ce1",
+						"id": "15f1ecfa-0bad-4dc2-a6cc-53188a399f51",
 						"exec": [
 							"const res = pm.response.json();",
 							"",
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"",
-							"",
-							"",
 							"",
 							"const template = `",
 							"    <style>",
@@ -825,7 +820,7 @@
 					}
 				}
 			],
-			"id": "cd52eec1-0f92-4600-bbf1-a48134eb3e0b",
+			"id": "b6bc4e0e-336b-45ec-8775-0ebe39f65971",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -846,7 +841,7 @@
 			},
 			"response": [
 				{
-					"id": "43fd6cc6-a802-40ae-911f-e90d3891a51a",
+					"id": "b6911746-ede1-4785-88d0-34344ce20253",
 					"name": "200 OK",
 					"originalRequest": {
 						"method": "GET",
@@ -864,7 +859,6 @@
 						}
 					},
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -874,92 +868,7 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n    \"type\": \"{{$randomBankAccountName}}\",\n    \"balance\": {\n        \"available\": {{$randomPrice}},\n        \"present\": {{$randomPrice}}\n    },\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"{{$randomBankAccount}}\",\n            \"routing\": \"{{$randomBankAccount}}\"\n        },\n        \"international\": {\n            \"bic\": \"{{$randomBankAccountBic}}\",\n            \"iban\": \"{{$randomBankAccountIban}}\"\n        }\n    },\n    \"interestRate\": 0.01,\n    \"lastStatementDate\": \"{{$randomDateRecent}}\"\n}"
-				},
-				{
-					"id": "c3c5db94-91b7-4b27-98cc-06f6600cc60d",
-					"name": "Overview",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/accounts/{{accountNumber}}/overview",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"accounts",
-								"{{accountNumber}}",
-								"overview"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Fri, 25 Jun 2021 23:00:46 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Server",
-							"value": "nginx"
-						},
-						{
-							"key": "x-srv-trace",
-							"value": "v=1;t=bcf696a1f66bca16"
-						},
-						{
-							"key": "x-srv-span",
-							"value": "v=1;s=ac55f1eb06269003"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "X-RateLimit-Limit",
-							"value": "120"
-						},
-						{
-							"key": "X-RateLimit-Remaining",
-							"value": "118"
-						},
-						{
-							"key": "X-RateLimit-Reset",
-							"value": "1624662096"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"1d1-kMgCr0Txkk7tZfwMDuyO5Fh387w\""
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "gzip"
-						}
-					],
-					"cookie": [],
-					"responseTime": null,
-					"body": "{\n    \"type\": \"Credit Card Account\",\n    \"balance\": {\n        \"available\": 248.04,\n        \"present\": 261.71\n    },\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"53145487\",\n            \"routing\": \"73765287\"\n        },\n        \"international\": {\n            \"bic\": \"DBDAICU1\",\n            \"iban\": \"NO1480472043009\"\n        }\n    },\n    \"interestRate\": 0.01,\n    \"lastStatementDate\": \"Fri Jun 25 2021 02:45:29 GMT+0000 (Coordinated Universal Time)\"\n}"
 				}
 			]
 		}
@@ -968,7 +877,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "2fc57227-c9df-4db3-9267-68e3bc9f3e5e",
+				"id": "68134d68-b28d-4073-86f9-5578c539eb6d",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -978,36 +887,10 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b9b9f80b-c4f1-4dfd-9928-e8d867221341",
+				"id": "43035269-fed3-4b5e-9475-bee1dde7002d",
 				"type": "text/javascript",
 				"exec": [
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
-					"});",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
-					"});",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
-					"});",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
-					"});"
+					""
 				]
 			}
 		}

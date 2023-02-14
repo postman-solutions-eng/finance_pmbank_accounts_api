@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "85639fc8-a0a8-473d-88cb-04094d89604e",
+		"_postman_id": "7d488b0b-e728-4c61-888a-8d0cb70c842f",
 		"name": "Accounts Integration Test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "24464586-85639fc8-a0a8-473d-88cb-04094d89604e"
+		"_uid": "16727226-7d488b0b-e728-4c61-888a-8d0cb70c842f"
 	},
 	"item": [
 		{
@@ -17,7 +17,24 @@
 							"item": [
 								{
 									"name": "Date",
-									"id": "e1f1ec17-665f-49cd-8bb9-0f9f6d453e19",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f856f75b-ac05-461a-b026-8e39b0e314fb",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "e30e8740-47c7-47de-87c0-7a90cd99c8d8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
 									"request": {
 										"method": "GET",
 										"header": [
@@ -26,10 +43,6 @@
 												"value": "application/form-urlencoded"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"from\": \"{{$randomDatePast}}\",\n    \"to\": \"{{$randomDateRecent}}\"\n}"
-										},
 										"url": {
 											"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
 											"host": [
@@ -53,15 +66,16 @@
 									},
 									"response": [
 										{
-											"id": "aae83dbc-933b-4593-96bf-ef06436f192b",
+											"id": "0973ecd3-6129-4b32-98f4-ad9ed6bb28dc",
 											"name": "200 OK",
 											"originalRequest": {
 												"method": "GET",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"from\": \"{{$randomDatePast}}\",\n    \"to\": \"{{$randomDateRecent}}\"\n}"
-												},
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/form-urlencoded"
+													}
+												],
 												"url": {
 													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
 													"host": [
@@ -75,15 +89,17 @@
 													],
 													"variable": [
 														{
-															"key": "accountNumber"
+															"key": "accountNumber",
+															"value": "velit aliquip dolore",
+															"description": "(Required) "
 														}
 													]
-												}
+												},
+												"description": "Date"
 											},
 											"status": "OK",
 											"code": 200,
 											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
 											"header": [
 												{
 													"disabled": false,
@@ -169,14 +185,30 @@
 												}
 											],
 											"cookie": [],
-											"responseTime": null,
 											"body": "{\n    \"period\": {\n        \"from\": \"{{$randomDatePast}}\",\n        \"to\": \"{{$randomDateRecent}}\"\n    },\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 										}
 									]
 								},
 								{
 									"name": "Latest",
-									"id": "235fc034-ff5b-4e1b-a5f2-8d6248cae095",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "69cfc6e4-d831-48a6-9456-957ff598308a",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "e355ab2f-f727-4edf-bd9c-6fc85ac89f7c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -203,8 +235,8 @@
 									},
 									"response": [
 										{
-											"id": "79f9d593-0035-4698-8f76-740fb1671bc3",
-											"name": "response",
+											"id": "45b819f8-2fd7-44c4-8d5c-5d6124eb7d00",
+											"name": "Untitled Example",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -221,15 +253,17 @@
 													],
 													"variable": [
 														{
-															"key": "accountNumber"
+															"key": "accountNumber",
+															"value": "velit aliquip dolore",
+															"description": "(Required) "
 														}
 													]
-												}
+												},
+												"description": "Latest"
 											},
 											"status": "OK",
 											"code": 200,
 											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
 											"header": [
 												{
 													"key": "Content-Type",
@@ -237,13 +271,12 @@
 												}
 											],
 											"cookie": [],
-											"responseTime": null,
 											"body": ""
 										}
 									]
 								}
 							],
-							"id": "ea0a91f0-2200-4db3-bab1-074d499a3f56"
+							"id": "f8c8dc72-b7d2-4983-b479-4752ade10cce"
 						},
 						{
 							"name": "Overview",
@@ -251,50 +284,20 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b01b5582-d7cd-4355-b841-cf193ae75539",
+										"id": "a75938c7-9fba-431c-89be-9752a5c83038",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
 											"});\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"pm.test(\"Response time is less than 600ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
 											"});"
 										],
 										"type": "text/javascript"
 									}
 								}
 							],
-							"id": "14b03342-b7bc-49c3-afdf-4356a4e1ff2f",
+							"id": "624b5807-8ad5-4a55-b095-753cd5cb6e72",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -323,8 +326,8 @@
 							},
 							"response": [
 								{
-									"id": "a0c1e3a4-d5e7-4533-bf04-d07e96745b0e",
-									"name": "response",
+									"id": "c8e6d9a4-4896-4e95-875c-4a8d6cb5ce9a",
+									"name": "Account overview",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -340,15 +343,17 @@
 											],
 											"variable": [
 												{
-													"key": "accountNumber"
+													"key": "accountNumber",
+													"value": "velit aliquip dolore",
+													"description": "(Required) "
 												}
 											]
-										}
+										},
+										"description": "Overview"
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
+									"_postman_previewlanguage": "json",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -356,17 +361,33 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": null,
-									"body": ""
+									"body": "{\n    \"type\": \"Credit Card Account\",\n    \"balance\": {\n        \"available\": 248.04,\n        \"present\": 261.71\n    },\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"53145487\",\n            \"routing\": \"73765287\"\n        },\n        \"international\": {\n            \"bic\": \"DBDAICU1\",\n            \"iban\": \"NO1480472043009\"\n        }\n    },\n    \"interestRate\": 0.01,\n    \"lastStatementDate\": \"Fri Jun 25 2021 02:45:29 GMT+0000 (Coordinated Universal Time)\"\n}"
 								}
 							]
 						}
 					],
-					"id": "5c792707-6dcc-4fdc-a8b7-4ec8b2d8f2c1"
+					"id": "065d5703-2503-4310-bc6a-dacad9683def"
 				},
 				{
 					"name": "Create",
-					"id": "bea73ac9-0db3-4c61-aabf-0ceccb0ead01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "90b904da-081a-44a2-9c6d-6d98adf4664f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "e3f3f492-67c9-4c8d-99d1-449182cffdc9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "POST",
 						"header": [
@@ -393,11 +414,16 @@
 					},
 					"response": [
 						{
-							"id": "fff0ba1a-90e2-4650-a8d1-b5faec5ffe20",
-							"name": "response",
+							"id": "2526aa54-ee3f-4ca5-b5df-d760c4fda1b9",
+							"name": "Created",
 							"originalRequest": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"holder\": \"{{customerId}}\",\n    \"type\": \"{{$randomBankAccountName}}\"\n}"
@@ -411,12 +437,12 @@
 										"accounts",
 										"create"
 									]
-								}
+								},
+								"description": "Create"
 							},
-							"status": "OK",
-							"code": 200,
+							"status": "Created",
+							"code": 201,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -424,13 +450,12 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
-							"body": ""
+							"body": "Account created successfully! Click <a href=\"example.com/accounts/36373586/12597\">here</a> to view it."
 						}
 					]
 				}
 			],
-			"id": "04326a7a-c065-4b98-8833-7c18115d55fa"
+			"id": "184d6fac-e65a-4463-90f3-aea375deb3cc"
 		}
 	],
 	"variable": [
