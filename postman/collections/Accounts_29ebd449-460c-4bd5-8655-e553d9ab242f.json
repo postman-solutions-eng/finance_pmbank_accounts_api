@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "673e876e-754d-4d95-900d-f4c3545635cf",
+		"_postman_id": "dc2a0607-47e2-4d69-aca9-e493e3511d56",
 		"name": "Accounts",
 		"description": "Endpoints for frontend implementations when it comes to the account space.\n\nResponses can be visualized to give a clearer picture on what responses provide.\n\nMake sure to select the respective Environment file when making calls for the Collection \n![Imgur](https://i.imgur.com/ymcwlzB.gif)\n\nReference image example here:\n![Imgur](https://i.imgur.com/WbEHxDz.jpg)\nand example of Date\n![Imgur](https://i.imgur.com/zQq3VNF.jpg)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "18475647-673e876e-754d-4d95-900d-f4c3545635cf"
+		"_uid": "24464586-dc2a0607-47e2-4d69-aca9-e493e3511d56"
 	},
 	"item": [
 		{
@@ -16,7 +16,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "85c06369-382f-4ff2-a363-44768a904087",
+								"id": "c7e693ee-9cb3-453f-b999-e460c728aac4",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -91,7 +91,7 @@
 							}
 						}
 					],
-					"id": "b28093b1-7c56-488a-8de2-336557fe3cb5",
+					"id": "c595e0c1-1d70-4b58-8967-5886921305d3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -114,7 +114,7 @@
 					},
 					"response": [
 						{
-							"id": "bc66494e-b7a6-4a58-80fd-2b6f98fa68f6",
+							"id": "4c086708-d91f-4a68-9d33-af8185ddb498",
 							"name": "200 OK",
 							"originalRequest": {
 								"method": "GET",
@@ -147,7 +147,7 @@
 							"body": "{\n    \"period\": \"latest\",\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 						},
 						{
-							"id": "3e8f14fd-a908-4efd-85c1-6f785f701d09",
+							"id": "975b51c9-ba26-4dc4-82da-3183789b7501",
 							"name": "Latest",
 							"originalRequest": {
 								"method": "GET",
@@ -239,7 +239,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "91a4092d-9367-4e66-b624-8f3ef2f5ee5f",
+								"id": "af78b738-0b01-4f16-b2a8-0e0483d13940",
 								"exec": [
 									"const res = pm.response.json();",
 									"",
@@ -322,7 +322,7 @@
 							}
 						}
 					],
-					"id": "31425213-21ab-4db0-bd99-ffd414cc40ee",
+					"id": "8ad09297-c5b9-4d72-9a8f-83b6692be968",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -360,11 +360,26 @@
 					},
 					"response": [
 						{
-							"id": "1db55281-c192-41e0-921f-5503c0b4d42a",
+							"id": "9be006b6-5006-452d-9c92-a22d5c7ebc7e",
 							"name": "200 OK",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "from",
+											"value": "{{$randomDatePast}}",
+											"type": "text"
+										},
+										{
+											"key": "to",
+											"value": "{{$randomDateRecent}}",
+											"type": "text"
+										}
+									]
+								},
 								"url": {
 									"raw": "{{url}}/accounts/{{accountNumber}}/statement/date",
 									"host": [
@@ -445,11 +460,26 @@
 							"body": "{\n    \"period\": {\n        \"from\": \"{{$randomDatePast}}\",\n        \"to\": \"{{$randomDateRecent}}\"\n    },\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 						},
 						{
-							"id": "a04e768f-74c2-44e4-994c-54a0cee37866",
+							"id": "276f2366-93bb-4b64-9719-5865e05a73e0",
 							"name": "Date",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "from",
+											"value": "{{$randomDatePast}}",
+											"type": "text"
+										},
+										{
+											"key": "to",
+											"value": "{{$randomDateRecent}}",
+											"type": "text"
+										}
+									]
+								},
 								"url": {
 									"raw": "{{url}}/accounts/{{accountNumber}}/statement/date",
 									"host": [
@@ -532,7 +562,7 @@
 					]
 				}
 			],
-			"id": "19412e01-f8c0-4b07-a3e2-78221ce6b1f2"
+			"id": "6faa18ec-50f3-4600-ae83-d66213cb27f1"
 		},
 		{
 			"name": "Create",
@@ -540,7 +570,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ce087f3d-d0ec-4c98-9671-42bc04aab881",
+						"id": "283a4581-799d-4a6e-b30b-a6b8bfefc405",
 						"exec": [
 							"const res = pm.response.json();",
 							"",
@@ -550,7 +580,7 @@
 					}
 				}
 			],
-			"id": "a44f6c68-feb1-46ba-9055-3604212b41c7",
+			"id": "a438071e-c0eb-44a5-a9a4-b3494a17d4de",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -579,7 +609,7 @@
 			},
 			"response": [
 				{
-					"id": "00ba22f3-0df2-48f0-8c96-175685bc6629",
+					"id": "31714380-b788-466b-aefc-be5f4b57e12d",
 					"name": "200 OK",
 					"originalRequest": {
 						"method": "POST",
@@ -626,7 +656,7 @@
 					"body": "{\n    \"type\": \"{{$randomBankAccountName}}\",\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"{{$randomBankAccount}}\",\n            \"routing\": \"{{$randomBankAccount}}\"\n        },\n        \"international\": {\n            \"bic\": \"{{$randomBankAccountBic}}\",\n            \"iban\": \"{{$randomBankAccountIban}}\"\n        }\n    }\n}"
 				},
 				{
-					"id": "7f44fbe0-46a6-4791-9c6d-2f216bbd48a1",
+					"id": "b3ccdc8b-5809-40fe-8969-39c33afb9a7d",
 					"name": "Create",
 					"originalRequest": {
 						"method": "POST",
@@ -725,7 +755,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a76b0ac5-9f93-42fe-8fd0-5db0e809adeb",
+						"id": "c7b67687-82db-4293-9f6a-7477499c56e8",
 						"exec": [
 							"const res = pm.response.json();",
 							"",
@@ -795,7 +825,7 @@
 					}
 				}
 			],
-			"id": "8e82ff29-3ec2-47ef-b094-933dff7d707e",
+			"id": "9547ee0b-0876-4952-91e8-24d8fc2ef552",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -816,7 +846,7 @@
 			},
 			"response": [
 				{
-					"id": "9a81b952-407e-49f7-8854-dfa7b27be76c",
+					"id": "dff0969c-ba2b-4e0d-9d31-d9847454d2f2",
 					"name": "200 OK",
 					"originalRequest": {
 						"method": "GET",
@@ -848,7 +878,7 @@
 					"body": "{\n    \"type\": \"{{$randomBankAccountName}}\",\n    \"balance\": {\n        \"available\": {{$randomPrice}},\n        \"present\": {{$randomPrice}}\n    },\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"{{$randomBankAccount}}\",\n            \"routing\": \"{{$randomBankAccount}}\"\n        },\n        \"international\": {\n            \"bic\": \"{{$randomBankAccountBic}}\",\n            \"iban\": \"{{$randomBankAccountIban}}\"\n        }\n    },\n    \"interestRate\": 0.01,\n    \"lastStatementDate\": \"{{$randomDateRecent}}\"\n}"
 				},
 				{
-					"id": "7cbec05b-b63d-4f05-a416-edf357620162",
+					"id": "bbef3bad-99b6-4164-bee6-502627000015",
 					"name": "Overview",
 					"originalRequest": {
 						"method": "GET",
@@ -938,7 +968,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e02fd51a-6826-467f-886b-ffed987b5fd0",
+				"id": "f9e90e2d-77f2-448c-9aa4-4ccbe887fef4",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -948,7 +978,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7eaa4472-22eb-47aa-b9f4-f5b4348aa1a9",
+				"id": "0b4160b2-1c17-4c1b-8ed7-af48e003e98e",
 				"type": "text/javascript",
 				"exec": [
 					"pm.test(\"Status code is 200\", function () {",
