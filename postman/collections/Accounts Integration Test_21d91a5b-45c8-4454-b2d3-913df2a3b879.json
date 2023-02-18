@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "85639fc8-a0a8-473d-88cb-04094d89604e",
+		"_postman_id": "8bc41ee0-a268-4bfb-a946-b4ee25fcbaa3",
 		"name": "Accounts Integration Test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "24464586-85639fc8-a0a8-473d-88cb-04094d89604e"
+		"_uid": "24464586-8bc41ee0-a268-4bfb-a946-b4ee25fcbaa3"
 	},
 	"item": [
 		{
@@ -17,7 +17,7 @@
 							"item": [
 								{
 									"name": "Date",
-									"id": "e1f1ec17-665f-49cd-8bb9-0f9f6d453e19",
+									"id": "3a28d7be-5171-404b-bc06-1513d16e514d",
 									"request": {
 										"method": "GET",
 										"header": [
@@ -53,7 +53,7 @@
 									},
 									"response": [
 										{
-											"id": "aae83dbc-933b-4593-96bf-ef06436f192b",
+											"id": "c9915c1a-fdd7-4ae8-b595-c8fb6374df6a",
 											"name": "200 OK",
 											"originalRequest": {
 												"method": "GET",
@@ -176,7 +176,7 @@
 								},
 								{
 									"name": "Latest",
-									"id": "235fc034-ff5b-4e1b-a5f2-8d6248cae095",
+									"id": "9f05940f-3119-4dc0-80b8-6aaecc357e36",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -203,7 +203,7 @@
 									},
 									"response": [
 										{
-											"id": "79f9d593-0035-4698-8f76-740fb1671bc3",
+											"id": "d7fe7783-9415-4dd7-bc40-8dc618b24be6",
 											"name": "response",
 											"originalRequest": {
 												"method": "GET",
@@ -243,8 +243,7 @@
 									]
 								}
 							],
-							"id": "ea0a91f0-2200-4db3-bab1-074d499a3f56",
-							"id": "bb81d683-7cfc-4696-93ee-dc63d0732e90"
+							"id": "b855f8b3-04e2-4cb1-972b-f87221562cd1"
 						},
 						{
 							"name": "Overview",
@@ -252,8 +251,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b01b5582-d7cd-4355-b841-cf193ae75539",
-										"id": "e26074bd-5b36-4cfe-85ad-bd1a4b5757e7",
+										"id": "112c9f07-ce82-41b4-b98b-065d980bc83a",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
@@ -296,7 +294,7 @@
 									}
 								}
 							],
-							"id": "14b03342-b7bc-49c3-afdf-4356a4e1ff2f",
+							"id": "0d2639e2-e1b0-4f79-b630-257d6e2788ca",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -325,7 +323,7 @@
 							},
 							"response": [
 								{
-									"id": "a0c1e3a4-d5e7-4533-bf04-d07e96745b0e",
+									"id": "c631ef6a-b396-44cf-b088-fc21acea422d",
 									"name": "response",
 									"originalRequest": {
 										"method": "GET",
@@ -364,11 +362,11 @@
 							]
 						}
 					],
-					"id": "5c792707-6dcc-4fdc-a8b7-4ec8b2d8f2c1"
+					"id": "3d07ad4c-8eaa-49fe-961a-a6893d591ccd"
 				},
 				{
 					"name": "Create",
-					"id": "bea73ac9-0db3-4c61-aabf-0ceccb0ead01",
+					"id": "225e3bd7-339a-4fef-afca-0bdf33d9f929",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -395,7 +393,7 @@
 					},
 					"response": [
 						{
-							"id": "fff0ba1a-90e2-4650-a8d1-b5faec5ffe20",
+							"id": "d03171cb-c7ae-4189-9a64-d8d994ff4ef2",
 							"name": "response",
 							"originalRequest": {
 								"method": "POST",
@@ -432,8 +430,7 @@
 					]
 				}
 			],
-			"id": "04326a7a-c065-4b98-8833-7c18115d55fa",
-			"id": "a4515478-f2a3-4d29-ad31-a0e37c1b6a92"
+			"id": "1709d5cd-ea13-44b3-a89f-a12af034f40c"
 		}
 	],
 	"variable": [
