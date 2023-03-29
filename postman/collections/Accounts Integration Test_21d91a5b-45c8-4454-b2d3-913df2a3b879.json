@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "8bc41ee0-a268-4bfb-a946-b4ee25fcbaa3",
+		"_postman_id": "1462eb98-ef07-45bf-8136-85fabf2f85ea",
 		"name": "Accounts Integration Test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "24464586-8bc41ee0-a268-4bfb-a946-b4ee25fcbaa3"
+		"_uid": "24113219-1462eb98-ef07-45bf-8136-85fabf2f85ea"
 	},
 	"item": [
 		{
@@ -17,7 +17,7 @@
 							"item": [
 								{
 									"name": "Date",
-									"id": "3a28d7be-5171-404b-bc06-1513d16e514d",
+									"id": "4d62224b-ba75-4b34-92d5-de0fe5d91912",
 									"request": {
 										"method": "GET",
 										"header": [
@@ -53,7 +53,7 @@
 									},
 									"response": [
 										{
-											"id": "c9915c1a-fdd7-4ae8-b595-c8fb6374df6a",
+											"id": "25f7a0f1-9a83-4228-8d06-3130b91f8e21",
 											"name": "200 OK",
 											"originalRequest": {
 												"method": "GET",
@@ -176,7 +176,7 @@
 								},
 								{
 									"name": "Latest",
-									"id": "9f05940f-3119-4dc0-80b8-6aaecc357e36",
+									"id": "20540ca5-2195-4165-b71d-2e99f972dad0",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -203,7 +203,7 @@
 									},
 									"response": [
 										{
-											"id": "d7fe7783-9415-4dd7-bc40-8dc618b24be6",
+											"id": "6bca41bf-5be1-4fd6-846b-d3a51ac03047",
 											"name": "response",
 											"originalRequest": {
 												"method": "GET",
@@ -243,7 +243,7 @@
 									]
 								}
 							],
-							"id": "b855f8b3-04e2-4cb1-972b-f87221562cd1"
+							"id": "a4a4eabc-30c7-4384-b648-bb248921c058"
 						},
 						{
 							"name": "Overview",
@@ -251,7 +251,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "112c9f07-ce82-41b4-b98b-065d980bc83a",
+										"id": "23b0239c-8d12-4381-aef0-a7f7ff5a44b5",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
@@ -294,7 +294,7 @@
 									}
 								}
 							],
-							"id": "0d2639e2-e1b0-4f79-b630-257d6e2788ca",
+							"id": "b74ba555-b59e-4248-9660-0851edc61d27",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -323,7 +323,7 @@
 							},
 							"response": [
 								{
-									"id": "c631ef6a-b396-44cf-b088-fc21acea422d",
+									"id": "671b4e71-66ea-404f-b8cb-659dbbfe32be",
 									"name": "response",
 									"originalRequest": {
 										"method": "GET",
@@ -362,11 +362,11 @@
 							]
 						}
 					],
-					"id": "3d07ad4c-8eaa-49fe-961a-a6893d591ccd"
+					"id": "0b54b857-25f9-450d-b930-a66c2be4bbdb"
 				},
 				{
 					"name": "Create",
-					"id": "225e3bd7-339a-4fef-afca-0bdf33d9f929",
+					"id": "b5ff0bef-be2c-4354-bdd8-161072f74e01",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -393,7 +393,7 @@
 					},
 					"response": [
 						{
-							"id": "d03171cb-c7ae-4189-9a64-d8d994ff4ef2",
+							"id": "624ae765-7fbc-483f-ac24-17702e1cb40d",
 							"name": "response",
 							"originalRequest": {
 								"method": "POST",
@@ -430,7 +430,7 @@
 					]
 				}
 			],
-			"id": "1709d5cd-ea13-44b3-a89f-a12af034f40c"
+			"id": "f722aa3b-e372-4dff-bdc9-b465f2622985"
 		}
 	],
 	"variable": [

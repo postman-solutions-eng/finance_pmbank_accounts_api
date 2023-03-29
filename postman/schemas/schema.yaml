@@ -3,7 +3,13 @@ openapi: 3.0.3
 info:
   title: Accounts
   version: 1.0.1
-  contact: {}
+  contact: example@example.com
+  termsOfService:
+    "https://example.com/tos"
+  description: "PM Bank's Accounts API for finance allows visibility into an account and its most recent statements. This API is available only to those with clearance from the organization, and there are two sandbox versions which must pass all checks before merging into Dev."
+  license:
+    name: Fake License
+    url: https://example.com/fake-license
 servers:
   - url: "{{url}}"
 security:
