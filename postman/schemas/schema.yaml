@@ -2,7 +2,7 @@
 openapi: 3.0.3
 info:
   title: Accounts
-  version: 1.0.1
+  version: 1.0.2
   contact:
     name: 'Example Support'
     email: example@example.com
@@ -16,8 +16,7 @@ info:
 
 servers:
   - url: "{{url}}"
-security:
-    - testAuth : []
+
 paths:
   /accounts/create:
     post:
@@ -28,12 +27,15 @@ paths:
         content:
           application/json:
             schema:
+              $ref: '#/components/schemas/Accounts'
               type: object
               properties:
                 holder:
+                  description: holder of account
                   type: string
                   example: "{{customerId}}"
                 type:
+                  description: create account
                   type: string
                   example: "{{$randomBankAccountName}}"
             example:
@@ -41,7 +43,9 @@ paths:
               type: "{{$randomBankAccountName}}"
       responses:
         "200":
-          description: ""
+          description: "Success"
+        "500":
+          description: "Internal server error"
   "/accounts/{accountNumber}/overview":
     get:
       summary: Overview
@@ -50,11 +54,16 @@ paths:
       responses:
         "200":
           description: ""
+        "500":
+          description: "Internal server error"
     parameters:
       - name: accountNumber
+        description: unique account number
+        example: 1234567
         in: path
         required: true
         schema:
+          $ref: '#/components/schemas/Accounts'
           type: string
   "/accounts/{accountNumber}/statement/date":
     get:
@@ -67,12 +76,15 @@ paths:
         content:
           application/form-urlencoded:
             schema:
+              $ref: '#/components/schemas/Accounts'
               type: object
               properties:
                 from:
+                  description: get account statement
                   type: string
                   example: "{{$randomDatePast}}"
                 to:
+                  description: statement date
                   type: string
                   example: "{{$randomDateRecent}}"
             example:
@@ -84,54 +96,67 @@ paths:
           headers:
             Access-Control-Allow-Origin:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: "*"
             Connection:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: close
             Content-Encoding:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: gzip
             Date:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: "Mon, 14 Jun 2021 14:30:25 GMT"
             ETag:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
             Server:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: nginx
             Transfer-Encoding:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: chunked
             Vary:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: Accept-Encoding
             X-RateLimit-Limit:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: "120"
             X-RateLimit-Remaining:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: "119"
             X-RateLimit-Reset:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: "1623681083"
             x-srv-span:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: v=1;s=210e5b055e5bd71e
             x-srv-trace:
               schema:
+                $ref: '#/components/schemas/Accounts'
                 type: string
                 example: v=1;t=d33d68b932344fce
           content:
@@ -139,11 +164,16 @@ paths:
               examples:
                 200 OK:
                   value: "{\n    \"period\": {\n        \"from\": \"{{$randomDatePast}}\",\n        \"to\": \"{{$randomDateRecent}}\"\n    },\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
+        "500":
+          description: "Internal server error"
     parameters:
       - name: accountNumber
+        description: unique account number
+        example: 1234567
         in: path
         required: true
         schema:
+          $ref: '#/components/schemas/Accounts'
           type: string
   "/accounts/{accountNumber}/statement/latest":
     get:
@@ -155,11 +185,29 @@ paths:
       responses:
         "200":
           description: ""
+        "500":
+          description: "Internal server error"
     parameters:
       - name: accountNumber
+        description: unique account number
+        example: 1234567
         in: path
         required: true
         schema:
+          $ref: '#/components/schemas/Accounts'
           type: string
 tags:
   - name: Statement
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+  schemas:
+    Accounts:
+      type: object
+      description: Accounts schema
+
+security:
+    - BasicAuth : []
