@@ -10,7 +10,11 @@ id = b70a5649-1775-40cf-876d-298af798cd54
 [config.relations.collections]
 rootDirectory = postman/collections
 files[] = {"id":"24113219-1462eb98-ef07-45bf-8136-85fabf2f85ea","path":"Accounts Integration Test_21d91a5b-45c8-4454-b2d3-913df2a3b879.json","metaData":{"generateCollectionPreferences":"{\"updateCollectionSync\":true}"}}
+files[] = {"id":"24113219-53eb4145-c724-4e5f-9759-b4a525013982","path":"Accounts_11acf998-f315-4d79-9b89-94d1bbdf4ec8.json","metaData":{}}
 files[] = {"id":"24464586-dc2a0607-47e2-4d69-aca9-e493e3511d56","path":"Accounts_29ebd449-460c-4bd5-8655-e553d9ab242f.json","metaData":{"generateCollectionPreferences":"{\"updateCollectionSync\":true}"}}
+files[] = {"id":"24113219-65a9ee6a-8935-4335-aab5-76da138b87f5","path":"Accounts_6c5292d4-4ae0-4249-bac9-699712a35913.json","metaData":{}}
+files[] = {"id":"24113219-b44ac399-b4a6-4924-a193-ba681f1c3ea9","path":"Accounts_cccbd4de-8f65-4748-91e6-4a3c704e3387.json","metaData":{}}
+files[] = {"id":"24113219-4c8d2e4f-9b59-4338-aa73-2304d01bf4ca","path":"Accounts_f12ededd-b3d4-4140-8b4f-dbe17af05d8a.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
