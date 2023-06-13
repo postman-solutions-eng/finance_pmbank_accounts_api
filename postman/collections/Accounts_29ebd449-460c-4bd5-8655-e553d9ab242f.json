@@ -133,7 +133,6 @@
 								}
 							},
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -143,7 +142,6 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"period\": \"latest\",\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 						},
 						{
@@ -168,7 +166,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -228,7 +225,6 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"period\": \"latest\",\n    \"balance\": {\n        \"opening\": 870.27,\n        \"closing\": 54.64\n    },\n    \"money\": {\n        \"in\": 464.03,\n        \"out\": 974.2\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Fri Jun 25 2021 21:58:26 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Kunde LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 225.99,\n            \"balance\": 878.82\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 17:19:48 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Hermann - Rice\",\n            \"type\": \"payment\",\n            \"amount\": 994.54,\n            \"balance\": 340.84\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 15:04:34 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Crona, Robel and Brakus\",\n            \"type\": \"deposit\",\n            \"amount\": 793.19,\n            \"balance\": 85.51\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 01:40:29 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Gutkowski - Hilpert\",\n            \"type\": \"deposit\",\n            \"amount\": 470.73,\n            \"balance\": 723.76\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 00:50:31 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Ortiz, Steuber and Conn\",\n            \"type\": \"deposit\",\n            \"amount\": 697.93,\n            \"balance\": 189.47\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 16:59:17 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Kunze, Will and Hermann\",\n            \"type\": \"withdrawal\",\n            \"amount\": 813.08,\n            \"balance\": 80.59\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 20:26:01 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Grant, Swaniawski and Cremin\",\n            \"type\": \"deposit\",\n            \"amount\": 236.16,\n            \"balance\": 365.98\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 07:26:30 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Kuhn - Monahan\",\n            \"type\": \"invoice\",\n            \"amount\": 621.22,\n            \"balance\": 600.04\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 17:26:45 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Bernhard Inc\",\n            \"type\": \"withdrawal\",\n            \"amount\": 718.87,\n            \"balance\": 381.78\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 10:26:39 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Berge - Weimann\",\n            \"type\": \"payment\",\n            \"amount\": 256.74,\n            \"balance\": 731.77\n        }\n    ]\n}"
 						}
 					]
@@ -396,7 +392,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -456,7 +451,6 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"period\": {\n        \"from\": \"{{$randomDatePast}}\",\n        \"to\": \"{{$randomDateRecent}}\"\n    },\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 						},
 						{
@@ -496,7 +490,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -556,7 +549,6 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"period\": {\n        \"from\": \"Wed Mar 17 2021 16:04:09 GMT+0000 (Coordinated Universal Time)\",\n        \"to\": \"Fri Jun 25 2021 10:12:14 GMT+0000 (Coordinated Universal Time)\"\n    },\n    \"balance\": {\n        \"opening\": 682.09,\n        \"closing\": 481.85\n    },\n    \"money\": {\n        \"in\": 694.86,\n        \"out\": 541.04\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Fri Jun 25 2021 19:03:47 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Schinner - Schowalter\",\n            \"type\": \"payment\",\n            \"amount\": 9.24,\n            \"balance\": 957.17\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 14:22:51 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"McLaughlin - Steuber\",\n            \"type\": \"deposit\",\n            \"amount\": 664.71,\n            \"balance\": 645.25\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 12:55:27 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Dicki Group\",\n            \"type\": \"deposit\",\n            \"amount\": 907.42,\n            \"balance\": 795.62\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 02:45:45 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Osinski Inc\",\n            \"type\": \"invoice\",\n            \"amount\": 240.24,\n            \"balance\": 93.44\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 21:36:47 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Homenick, Hoppe and Grimes\",\n            \"type\": \"payment\",\n            \"amount\": 879.51,\n            \"balance\": 885.84\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 18:55:21 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Sauer - Turcotte\",\n            \"type\": \"invoice\",\n            \"amount\": 436.22,\n            \"balance\": 450.93\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 17:53:44 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Oberbrunner Group\",\n            \"type\": \"invoice\",\n            \"amount\": 995.82,\n            \"balance\": 354.77\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 10:41:51 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Dooley LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 886.28,\n            \"balance\": 906.21\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 18:44:34 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Haley - Buckridge\",\n            \"type\": \"payment\",\n            \"amount\": 42.23,\n            \"balance\": 701.92\n        },\n        {\n            \"date\": \"Fri Jun 25 2021 04:02:49 GMT+0000 (Coordinated Universal Time)\",\n            \"description\": \"Breitenberg and Sons\",\n            \"type\": \"deposit\",\n            \"amount\": 570.68,\n            \"balance\": 524.37\n        }\n    ]\n}"
 						}
 					]
@@ -642,7 +634,6 @@
 						}
 					},
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -652,7 +643,6 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n    \"type\": \"{{$randomBankAccountName}}\",\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"{{$randomBankAccount}}\",\n            \"routing\": \"{{$randomBankAccount}}\"\n        },\n        \"international\": {\n            \"bic\": \"{{$randomBankAccountBic}}\",\n            \"iban\": \"{{$randomBankAccountIban}}\"\n        }\n    }\n}"
 				},
 				{
@@ -684,7 +674,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Date",
@@ -744,7 +733,6 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n    \"type\": \"Home Loan Account\",\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"18924483\",\n            \"routing\": \"21804671\"\n        },\n        \"international\": {\n            \"bic\": \"UYUEPTC1\",\n            \"iban\": \"EE400911030046200371\"\n        }\n    }\n}"
 				}
 			]
@@ -864,7 +852,6 @@
 						}
 					},
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -874,7 +861,6 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n    \"type\": \"{{$randomBankAccountName}}\",\n    \"balance\": {\n        \"available\": {{$randomPrice}},\n        \"present\": {{$randomPrice}}\n    },\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"{{$randomBankAccount}}\",\n            \"routing\": \"{{$randomBankAccount}}\"\n        },\n        \"international\": {\n            \"bic\": \"{{$randomBankAccountBic}}\",\n            \"iban\": \"{{$randomBankAccountIban}}\"\n        }\n    },\n    \"interestRate\": 0.01,\n    \"lastStatementDate\": \"{{$randomDateRecent}}\"\n}"
 				},
 				{
@@ -898,7 +884,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Date",
@@ -958,7 +943,6 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n    \"type\": \"Credit Card Account\",\n    \"balance\": {\n        \"available\": 248.04,\n        \"present\": 261.71\n    },\n    \"details\": {\n        \"domestic\": {\n            \"account\": \"53145487\",\n            \"routing\": \"73765287\"\n        },\n        \"international\": {\n            \"bic\": \"DBDAICU1\",\n            \"iban\": \"NO1480472043009\"\n        }\n    },\n    \"interestRate\": 0.01,\n    \"lastStatementDate\": \"Fri Jun 25 2021 02:45:29 GMT+0000 (Coordinated Universal Time)\"\n}"
 				}
 			]
@@ -968,7 +952,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f9e90e2d-77f2-448c-9aa4-4ccbe887fef4",
+				"id": "8133b975-d973-43bf-938c-4cd3f1cd0813",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -978,36 +962,10 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "0b4160b2-1c17-4c1b-8ed7-af48e003e98e",
+				"id": "6eddcddc-efa1-4854-8e64-e8561fa6c4da",
 				"type": "text/javascript",
 				"exec": [
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
-					"});",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
-					"});",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
-					"});",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
-					"});",
-					"pm.test(\"Response time is less than 200ms\", function () {",
-					"    pm.expect(pm.response.responseTime).to.be.below(200);",
-					"});"
+					""
 				]
 			}
 		}
