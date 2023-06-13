@@ -18,6 +18,9 @@
 								{
 									"name": "Date",
 									"id": "4d62224b-ba75-4b34-92d5-de0fe5d91912",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
 									"request": {
 										"method": "GET",
 										"header": [
@@ -31,9 +34,9 @@
 											"raw": "{\n    \"from\": \"{{$randomDatePast}}\",\n    \"to\": \"{{$randomDateRecent}}\"\n}"
 										},
 										"url": {
-											"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+											"raw": "{{accountsUrl}}/accounts/:accountNumber/statement/date",
 											"host": [
-												"{{baseUrl}}"
+												"{{accountsUrl}}"
 											],
 											"path": [
 												"accounts",
@@ -63,9 +66,9 @@
 													"raw": "{\n    \"from\": \"{{$randomDatePast}}\",\n    \"to\": \"{{$randomDateRecent}}\"\n}"
 												},
 												"url": {
-													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+													"raw": "{{accountsUrl}}/accounts/:accountNumber/statement/date",
 													"host": [
-														"{{baseUrl}}"
+														"{{accountsUrl}}"
 													],
 													"path": [
 														"accounts",
@@ -82,8 +85,7 @@
 											},
 											"status": "OK",
 											"code": 200,
-											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
+											"_postman_previewlanguage": "json",
 											"header": [
 												{
 													"disabled": false,
@@ -165,11 +167,13 @@
 												},
 												{
 													"key": "Content-Type",
-													"value": "text/plain"
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
 												}
 											],
 											"cookie": [],
-											"responseTime": null,
 											"body": "{\n    \"period\": {\n        \"from\": \"{{$randomDatePast}}\",\n        \"to\": \"{{$randomDateRecent}}\"\n    },\n    \"balance\": {\n        \"opening\": {{$randomPrice}},\n        \"closing\": {{$randomPrice}}\n    },\n    \"money\": {\n        \"in\": {{$randomPrice}},\n        \"out\": {{$randomPrice}}\n    },\n    \"transactions\": [\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        },\n        {\n            \"date\": \"{{$randomDateRecent}}\",\n            \"description\": \"{{$randomCompanyName}}\",\n            \"type\": \"{{$randomTransactionType}}\",\n            \"amount\": {{$randomPrice}},\n            \"balance\": {{$randomPrice}}\n        }\n    ]\n}"
 										}
 									]
@@ -177,13 +181,16 @@
 								{
 									"name": "Latest",
 									"id": "20540ca5-2195-4165-b71d-2e99f972dad0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
 									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+											"raw": "{{accountsUrl}}/accounts/:accountNumber/statement/latest",
 											"host": [
-												"{{baseUrl}}"
+												"{{accountsUrl}}"
 											],
 											"path": [
 												"accounts",
@@ -209,9 +216,9 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+													"raw": "{{accountsUrl}}/accounts/:accountNumber/statement/latest",
 													"host": [
-														"{{baseUrl}}"
+														"{{accountsUrl}}"
 													],
 													"path": [
 														"accounts",
@@ -228,16 +235,17 @@
 											},
 											"status": "OK",
 											"code": 200,
-											"_postman_previewlanguage": "text",
-											"_postman_previewtype": "html",
+											"_postman_previewlanguage": "json",
 											"header": [
 												{
 													"key": "Content-Type",
-													"value": "text/plain"
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
 												}
 											],
 											"cookie": [],
-											"responseTime": null,
 											"body": ""
 										}
 									]
@@ -255,39 +263,6 @@
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -302,9 +277,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+									"raw": "{{accountsUrl}}/accounts/:accountNumber/overview",
 									"host": [
-										"{{baseUrl}}"
+										"{{accountsUrl}}"
 									],
 									"path": [
 										"accounts",
@@ -329,9 +304,9 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+											"raw": "{{accountsUrl}}/accounts/:accountNumber/overview",
 											"host": [
-												"{{baseUrl}}"
+												"{{accountsUrl}}"
 											],
 											"path": [
 												"accounts",
@@ -348,7 +323,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "text",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -356,7 +330,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": null,
 									"body": ""
 								}
 							]
@@ -367,6 +340,9 @@
 				{
 					"name": "Create",
 					"id": "b5ff0bef-be2c-4354-bdd8-161072f74e01",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "POST",
 						"header": [
@@ -380,9 +356,9 @@
 							"raw": "{\n    \"holder\": \"{{customerId}}\",\n    \"type\": \"{{$randomBankAccountName}}\"\n}"
 						},
 						"url": {
-							"raw": "{{baseUrl}}/accounts/create",
+							"raw": "{{accountsUrl}}/accounts/create",
 							"host": [
-								"{{baseUrl}}"
+								"{{accountsUrl}}"
 							],
 							"path": [
 								"accounts",
@@ -403,9 +379,9 @@
 									"raw": "{\n    \"holder\": \"{{customerId}}\",\n    \"type\": \"{{$randomBankAccountName}}\"\n}"
 								},
 								"url": {
-									"raw": "{{baseUrl}}/accounts/create",
+									"raw": "{{accountsUrl}}/accounts/create",
 									"host": [
-										"{{baseUrl}}"
+										"{{accountsUrl}}"
 									],
 									"path": [
 										"accounts",
@@ -416,7 +392,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -424,7 +399,6 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": ""
 						}
 					]
